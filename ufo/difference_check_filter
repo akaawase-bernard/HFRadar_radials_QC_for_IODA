@@ -1,0 +1,4 @@
+- filter: Difference Check
+  reference: brightness_temperature_8@ObsValue
+  value: brightness_temperature_9@ObsValue
+  minvalue: 0

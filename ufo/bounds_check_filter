@@ -1,0 +1,20 @@
+observations:
+- obs space:
+    name: HFRadar-DA
+    obsdatain:
+      obsfile: data/ioda_hdf5_file/RDL_i_Rutgers_MVCO_2023_07_01_0000.hdf5
+    #simulated variables: [WaterZonalVelocity]
+    #channels: 1
+  obs filters:
+  - filter: Bounds Check
+    filter variables:
+    - name: waterZonalVelocity
+    - name: waterMeridionalVelocity
+      channels: 1
+    minvalue: 3.0
+    maxvalue: -3.0
+  - filter: Background Check
+    filter variables:
+    - name: WaterZonalVelocity
+      channels: 1
+    threshold: 3.0

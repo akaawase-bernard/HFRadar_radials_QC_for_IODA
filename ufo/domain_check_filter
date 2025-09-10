@@ -1,0 +1,15 @@
+- filter: Domain Check
+  where:
+  - variable:
+      name: sea_surface_temperature@GeoVaLs
+    minvalue: 200
+    maxvalue: 300
+  - variable:
+      name: height@MetaData
+    is_defined:
+  - variable:
+      name: station_id@MetaData
+    is_in: 3, 6, 11-120
+  - variable:
+      name: air_pressure@MetaData
+    is_not_defined:

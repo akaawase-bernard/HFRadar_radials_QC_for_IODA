@@ -1,0 +1,5 @@
+- filter: BlackList
+  where:
+  - variable:
+      name: station_id@MetaData
+    is_in: 1, 7, 100-199
